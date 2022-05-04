@@ -23,7 +23,7 @@ public class UsuariosEntity implements Serializable {
 	 @Id
 	 @GeneratedValue(strategy=GenerationType.IDENTITY)
 	 @Column(name="usuario_ide", nullable=false)
-	 private String usuarioide ; 
+	 private Long usuarioide ; 
 	 
 	 @NotNull
 	 @Size(min=1, max=100)
@@ -49,11 +49,13 @@ public class UsuariosEntity implements Serializable {
      private Date  usuariovigenciafinal ;
 
 	 
-	 public String getUsuarioide() {
+	
+
+	public Long getUsuarioide() {
 		return usuarioide;
 	}
 
-	public void setUsuarioide(String usuarioide) {
+	public void setUsuarioide(Long usuarioide) {
 		this.usuarioide = usuarioide;
 	}
 
