@@ -30,7 +30,18 @@ public class UsuariosEntity implements Serializable {
      @Column(name="usuario_nombre", nullable= false, length=100)
      private String usuarionombre ;
 	 
-	 @NotNull
+	 @Column(name = "username")
+	 private String username;
+	 
+	 public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	@NotNull
 	 @Size(min=1, max=100)
      @Column(name="usuario_pass", nullable= false, length=100)
      private String usuariopass ;

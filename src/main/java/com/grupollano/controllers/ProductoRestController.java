@@ -34,11 +34,13 @@ public class ProductoRestController {
 	@Autowired
 	private ProductoServiceImpl productoServiceImpl;
 	
+	
 	@GetMapping(path = "/all/v1", produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<ProductoEntity> getProductos() {
 		return productoServiceImpl.findAll();
 	}
 	
+
 	@PostMapping(path = {"/save/v1"}, produces = MediaType.APPLICATION_JSON_VALUE )
 	public ResponseEntity<GenericoResponse> saveProducto(@RequestBody ProductoEntity productoEntity) {
 		this.productoServiceImpl.save(productoEntity);

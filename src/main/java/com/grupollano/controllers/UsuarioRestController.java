@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.grupollano.model.entity.UsuariosEntity;
@@ -40,11 +39,13 @@ public class UsuarioRestController {
 	@Autowired
 	private UsuarioServiceImpl usuarioServiceImpl;
 	
+	
 	@GetMapping(path = { "/all/v1" }, produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<UsuariosEntity> getUsuarios() {
 		return usuarioServiceImpl.findAll();
 	}
 	
+	/*@PreAuthorize("hasAnyRole('Admin','superusuario')")
 	@GetMapping(path = {"/","/page/v1"}, produces = MediaType.APPLICATION_JSON_VALUE )
 	public Page<UsuariosEntity> usuarios(@RequestParam(name = "page", defaultValue = "0") int page){
 		
@@ -53,14 +54,16 @@ public class UsuarioRestController {
 		return usuarios;
 		
 		
-	}
+	}*/
 	
+
 	@PostMapping(path = {"/save/v1"}, produces = MediaType.APPLICATION_JSON_VALUE )
 	public ResponseEntity<GenericoResponse> saveUsuario(@RequestBody UsuariosEntity usuarioEntity) {
 		this.usuarioServiceImpl.save(usuarioEntity);
 		return new ResponseEntity<>( new GenericoResponse<>(usuarioEntity, "Se Grabo exitosamente"), HttpStatus.OK);
 	}
 	
+
 	@DeleteMapping(path = {"/remove/v1/{Id}"}, produces = MediaType.APPLICATION_JSON_VALUE )
 	public ResponseEntity<GenericoResponse> removeUsuario( @PathVariable("Id") Long Id) {
 		try {

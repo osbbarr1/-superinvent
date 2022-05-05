@@ -10,6 +10,7 @@ import com.grupollano.model.entity.UsuariosEntity;
  *
  */
 
+
 public interface IUsuarioServices {
 
 	public List<UsuariosEntity> findAll();

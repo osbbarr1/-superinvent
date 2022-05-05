@@ -1,3 +1,15 @@
-C:\xampp\htdocs\superinvent\src\main\java\com\grupollano\model\entity\UsuariosEntity.java
-C:\xampp\htdocs\superinvent\src\main\java\com\grupollano\ServletInitializer.java
+C:\xampp\htdocs\superinvent\src\main\java\com\grupollano\service\IUsuarioServices.java
+C:\xampp\htdocs\superinvent\src\main\java\com\grupollano\util\GenericoResponse.java
+C:\xampp\htdocs\superinvent\src\main\java\com\grupollano\service\IProductoServices.java
+C:\xampp\htdocs\superinvent\src\main\java\com\grupollano\controllers\UsuarioRestController.java
+C:\xampp\htdocs\superinvent\src\main\java\com\grupollano\model\entity\ProductoEntity.java
 C:\xampp\htdocs\superinvent\src\main\java\com\grupollano\SuperinventApplication.java
+C:\xampp\htdocs\superinvent\src\main\java\com\grupollano\controllers\ProductoRestController.java
+C:\xampp\htdocs\superinvent\src\main\java\com\grupollano\service\UsuarioServiceImpl.java
+C:\xampp\htdocs\superinvent\src\main\java\com\grupollano\model\entity\UsuariosEntity.java
+C:\xampp\htdocs\superinvent\src\main\java\com\grupollano\service\ProductoServiceImpl.java
+C:\xampp\htdocs\superinvent\src\main\java\com\grupollano\security\jwt\SimpleGrantedAuthorityMixin.java
+C:\xampp\htdocs\superinvent\src\main\java\com\grupollano\repo\entity\IProductoDao.java
+C:\xampp\htdocs\superinvent\src\main\java\com\grupollano\repo\entity\IUsuarioDao.java
+C:\xampp\htdocs\superinvent\src\main\java\com\grupollano\ServletInitializer.java
+C:\xampp\htdocs\superinvent\src\main\java\com\grupollano\controllers\LoginController.java

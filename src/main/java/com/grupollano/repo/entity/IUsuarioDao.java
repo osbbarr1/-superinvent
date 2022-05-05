@@ -1,6 +1,6 @@
 package com.grupollano.repo.entity;
 
-import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.repository.CrudRepository;
 
 import com.grupollano.model.entity.UsuariosEntity;
 
@@ -10,6 +10,6 @@ import com.grupollano.model.entity.UsuariosEntity;
  *
  */
 
-public interface IUsuarioDao extends PagingAndSortingRepository<UsuariosEntity, Long>{
-
+public interface IUsuarioDao extends CrudRepository<UsuariosEntity, Long>{
+	public UsuariosEntity findByUsername(String username);
 }

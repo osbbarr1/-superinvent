@@ -22,11 +22,14 @@ public class UsuarioServiceImpl implements IUsuarioServices {
 	
 	@Autowired
 	private IUsuarioDao iUsuarioDao;
+	
+	@Autowired
+	private IUsuarioServices usuarioService;
 
-	@Transactional(readOnly = true)
-	public Page<UsuariosEntity> findAllPage(Pageable page) {		
-		return iUsuarioDao.findAll(page);
-	}
+//	@Transactional(readOnly = true)
+	//public Page<UsuariosEntity> findAllPage(Pageable page) {		
+	//	return iUsuarioDao.findAll(page);
+	//}
 	
 	@Override
 	public List<UsuariosEntity> findAll() {
