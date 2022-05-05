@@ -2,8 +2,8 @@ package com.grupollano.repo.entity;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.grupollano.model.entity.InventarioEntity;
+import com.grupollano.model.entity.VentaEntity;
 
-public interface IVentaDao extends JpaRepository<InventarioEntity, Long> {
+public interface IVentaDao extends JpaRepository<VentaEntity, Long> {
 
 }

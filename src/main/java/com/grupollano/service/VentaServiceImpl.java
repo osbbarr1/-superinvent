@@ -8,7 +8,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.grupollano.model.entity.InventarioEntity;
+import com.grupollano.model.entity.VentaEntity;
 import com.grupollano.repo.entity.IVentaDao;
 
 @Service
@@ -18,23 +18,23 @@ public class VentaServiceImpl implements IVentaService {
 	private IVentaDao iVentaDao;
 	
 	@Transactional(readOnly = true)
-	public Page<InventarioEntity> findAllPage(Pageable page) {
+	public Page<VentaEntity> findAllPage(Pageable page) {
 		return iVentaDao.findAll(page);
 	}
 
 	@Override
-	public List<InventarioEntity> findAll() {
+	public List<VentaEntity> findAll() {
 		return iVentaDao.findAll();
 	}
 
 
 	@Override
-	public void save(InventarioEntity inventarioEntity) {
+	public void save(VentaEntity inventarioEntity) {
 		iVentaDao.save(inventarioEntity);	
 	}
 
 	@Override
-	public InventarioEntity findOne(Long id) {
+	public VentaEntity findOne(Long id) {
 		return iVentaDao.findById(id).orElse(null);
 	}
 

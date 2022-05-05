@@ -5,18 +5,18 @@ import java.util.List;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable; 
 
-import com.grupollano.model.entity.InventarioEntity;
+import com.grupollano.model.entity.VentaEntity;
 
 
 public interface IVentaService {
 
-	public List<InventarioEntity> findAll();
+	public List<VentaEntity> findAll();
 	
-	public Page<InventarioEntity> findAllPage(Pageable page);
+	public Page<VentaEntity> findAllPage(Pageable page);
 	
-	public void save(InventarioEntity inventarioEntity);
+	public void save(VentaEntity inventarioEntity);
 	
-	public InventarioEntity findOne(Long id);
+	public VentaEntity findOne(Long id);
 	
 	public void delete(Long id);
 	
